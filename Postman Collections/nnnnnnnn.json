@@ -27,7 +27,7 @@
         {
           "listen": "test",
           "script": {
-            "id": "f75ba028-9ce0-46fa-b600-09c5ac22c98b",
+            "id": "b2562560-07d8-4e08-845c-aaa3a5e78ec1",
             "type": "text/javascript",
             "exec": [
               "// example using pm.response.to.have",
@@ -50,11 +50,17 @@
               "// example using pm.response.to.be*",
               "pm.test(\"response must be valid and have a body\", function () {",
               "     // assert that the status code is 200",
-              "     pm.response.to.be.ok; // info, success, redirection, clientError,  serverError, are other variants",
+              "    // pm.response.to.be.ok; // info, success, redirection, clientError,  serverError, are other variants",
               "     // assert that the response has a valid JSON body",
               "     pm.response.to.be.withBody;",
               "     pm.response.to.be.json; // this assertion also checks if a body  exists, so the above check is not needed",
-              "});"
+              "});",
+              "",
+              "pm.test(\"Response time is less than 200ms\", function () {",
+              "    pm.expect(pm.response.responseTime).to.be.below(200);",
+              "});",
+              "",
+              ""
             ]
           }
         }
