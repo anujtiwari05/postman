@@ -149,6 +149,50 @@
             "description": "fetching specific lifestage"
           },
           "response": []
+        },
+        {
+          "_postman_id": "57c4e89f-e88d-f8ba-d904-3a29ebdab421",
+          "name": "staging.babydestination.com:4000/api/v1/blog/slug/principles-of-good-parenting?lifestage=preg 1w-13w&category=Home Remedies&type=cards copy copy copy copy copy",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "staging.babydestination.com:4000/api/v1/blog/slug/principles-of-good-parenting?lifestage=preg 1w-13w&category=Home Remedies&type=cards",
+              "host": [
+                "staging",
+                "babydestination",
+                "com"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "v1",
+                "blog",
+                "slug",
+                "principles-of-good-parenting"
+              ],
+              "query": [
+                {
+                  "equals": true,
+                  "key": "lifestage",
+                  "value": "preg 1w-13w"
+                },
+                {
+                  "equals": true,
+                  "key": "category",
+                  "value": "Home Remedies"
+                },
+                {
+                  "equals": true,
+                  "key": "type",
+                  "value": "cards"
+                }
+              ]
+            },
+            "description": "fetching specific lifestage"
+          },
+          "response": []
         }
       ]
     }
