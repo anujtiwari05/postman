@@ -10,51 +10,52 @@
       "_postman_id": "3a9975fa-e794-6f17-5311-ea0148dcabbe",
       "name": "lifestage",
       "description": "",
-      "item": []
-    },
-    {
-      "_postman_id": "4f84b9cf-351a-ecac-e177-9613eb6ad5ba",
-      "name": "staging.babydestination.com:4000/api/v1/blog/slug/principles-of-good-parenting?lifestage=preg 1w-13w&category=Home Remedies&type=cards copy copy",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "body": {},
-        "url": {
-          "raw": "staging.babydestination.com:4000/api/v1/blog/slug/principles-of-good-parenting?lifestage=preg 1w-13w&category=Home Remedies&type=cards",
-          "host": [
-            "staging",
-            "babydestination",
-            "com"
-          ],
-          "port": "4000",
-          "path": [
-            "api",
-            "v1",
-            "blog",
-            "slug",
-            "principles-of-good-parenting"
-          ],
-          "query": [
-            {
-              "key": "lifestage",
-              "value": "preg 1w-13w",
-              "equals": true
+      "item": [
+        {
+          "_postman_id": "4f84b9cf-351a-ecac-e177-9613eb6ad5ba",
+          "name": "staging.babydestination.com:4000/api/v1/blog/slug/principles-of-good-parenting?lifestage=preg 1w-13w&category=Home Remedies&type=cards copy copy",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "staging.babydestination.com:4000/api/v1/blog/slug/principles-of-good-parenting?lifestage=preg 1w-13w&category=Home Remedies&type=cards",
+              "host": [
+                "staging",
+                "babydestination",
+                "com"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "v1",
+                "blog",
+                "slug",
+                "principles-of-good-parenting"
+              ],
+              "query": [
+                {
+                  "key": "lifestage",
+                  "value": "preg 1w-13w",
+                  "equals": true
+                },
+                {
+                  "key": "category",
+                  "value": "Home Remedies",
+                  "equals": true
+                },
+                {
+                  "key": "type",
+                  "value": "cards",
+                  "equals": true
+                }
+              ]
             },
-            {
-              "key": "category",
-              "value": "Home Remedies",
-              "equals": true
-            },
-            {
-              "key": "type",
-              "value": "cards",
-              "equals": true
-            }
-          ]
-        },
-        "description": "fetching specific lifestage"
-      },
-      "response": []
+            "description": "fetching specific lifestage"
+          },
+          "response": []
+        }
+      ]
     },
     {
       "_postman_id": "e6f4a228-08cf-c5f4-e3e3-72f8a0097c51",
