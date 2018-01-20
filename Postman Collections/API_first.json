@@ -54,6 +54,62 @@
             "description": "fetching specific lifestage"
           },
           "response": []
+        },
+        {
+          "_postman_id": "14179134-cf06-7e7e-b776-c124b1e8487a",
+          "name": "staging.babydestination.com:4000/api/v1/blog/slug/principles-of-good-parenting?lifestage=preg 1w-13w&category=Home Remedies&type=video",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "d4bb9d45-eec3-4d35-8515-4966f2a35abc",
+                "type": "text/javascript",
+                "exec": [
+                  "console.log('reuest 1')"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": {
+              "raw": "staging.babydestination.com:4000/api/v1/blog/slug/principles-of-good-parenting?lifestage=preg 1w-13w&category=Home Remedies&type=video",
+              "host": [
+                "staging",
+                "babydestination",
+                "com"
+              ],
+              "port": "4000",
+              "path": [
+                "api",
+                "v1",
+                "blog",
+                "slug",
+                "principles-of-good-parenting"
+              ],
+              "query": [
+                {
+                  "key": "lifestage",
+                  "value": "preg 1w-13w",
+                  "equals": true
+                },
+                {
+                  "key": "category",
+                  "value": "Home Remedies",
+                  "equals": true
+                },
+                {
+                  "key": "type",
+                  "value": "video",
+                  "equals": true
+                }
+              ]
+            },
+            "description": null
+          },
+          "response": []
         }
       ]
     },
