@@ -27,40 +27,13 @@
         {
           "listen": "test",
           "script": {
-            "id": "b2562560-07d8-4e08-845c-aaa3a5e78ec1",
+            "id": "1b97632a-d90b-4f42-b1d4-e29388c1c170",
             "type": "text/javascript",
             "exec": [
-              "// example using pm.response.to.have",
-              "pm.test(\"response is ok\", function () {",
-              "    pm.response.to.have.status(200);",
-              "});",
+              "tests[\"Check the status\"]=responseCode.code===200;",
               "",
-              "// example using pm.expect()",
-              "pm.test(\"environment to be production\", function () { ",
-              "    pm.expect(pm.environment.get(\"env\")).to.equal(\"Staging\"); ",
-              "});",
-              "",
-              "// example using response assertions",
-              "pm.test(\"response should be okay to process\", function () { ",
-              "    pm.response.to.not.be.error; ",
-              "    pm.response.to.have.jsonBody(\"\"); ",
-              "    pm.response.to.not.have.jsonBody(\"error\"); ",
-              "});",
-              "",
-              "// example using pm.response.to.be*",
-              "pm.test(\"response must be valid and have a body\", function () {",
-              "     // assert that the status code is 200",
-              "    // pm.response.to.be.ok; // info, success, redirection, clientError,  serverError, are other variants",
-              "     // assert that the response has a valid JSON body",
-              "     pm.response.to.be.withBody;",
-              "     pm.response.to.be.json; // this assertion also checks if a body  exists, so the above check is not needed",
-              "});",
-              "",
-              "pm.test(\"Response time is less than 200ms\", function () {",
-              "    pm.expect(pm.response.responseTime).to.be.below(200);",
-              "});",
-              "",
-              ""
+              "var data=JSON.parse(responseBody);",
+              "tests[\"Default limit is 10\"]=data.limit===5;"
             ]
           }
         }
@@ -70,7 +43,7 @@
         "header": [],
         "body": {},
         "url": {
-          "raw": "staging.babydestination.com:4000/api/v1/blog/slug/principles-of-good-parenting?lifestage=preg 1w-13w&category=Home Remedies&type=cards",
+          "raw": "staging.babydestination.com:4000/api/v1/blog/related/slug/principles-of-good-parenting?lifestage=preg 1w-13w&category=Home Remedies&type=cards",
           "host": [
             "staging",
             "babydestination",
@@ -81,24 +54,22 @@
             "api",
             "v1",
             "blog",
+            "related",
             "slug",
             "principles-of-good-parenting"
           ],
           "query": [
             {
               "key": "lifestage",
-              "value": "preg 1w-13w",
-              "equals": true
+              "value": "preg 1w-13w"
             },
             {
               "key": "category",
-              "value": "Home Remedies",
-              "equals": true
+              "value": "Home Remedies"
             },
             {
               "key": "type",
-              "value": "cards",
-              "equals": true
+              "value": "cards"
             }
           ]
         },
