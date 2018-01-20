@@ -27,13 +27,13 @@
         {
           "listen": "test",
           "script": {
-            "id": "1b97632a-d90b-4f42-b1d4-e29388c1c170",
+            "id": "5483026c-a2b4-41a6-ba17-22de0934ae52",
             "type": "text/javascript",
             "exec": [
               "tests[\"Check the status\"]=responseCode.code===200;",
               "",
               "var data=JSON.parse(responseBody);",
-              "tests[\"Default limit is 10\"]=data.limit===5;"
+              "tests[\"Default limit is 10\"]=data.isExpert===4;"
             ]
           }
         }
