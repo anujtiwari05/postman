@@ -365,7 +365,31 @@
         "method": "GET",
         "header": [],
         "body": {},
-        "url": "",
+        "url": {
+          "raw": "http://localhost:3000/v1/user/signup?role=subscriber&source=website",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "user",
+            "signup"
+          ],
+          "query": [
+            {
+              "key": "role",
+              "value": "subscriber",
+              "equals": true
+            },
+            {
+              "key": "source",
+              "value": "website",
+              "equals": true
+            }
+          ]
+        },
         "description": null
       },
       "response": []
